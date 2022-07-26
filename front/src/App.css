@@ -1,5 +1,10 @@
+.Header {
+    justify-content: space-between;
+}
 .App {
-  text-align: center;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
 }
 
 .App-logo {
@@ -25,7 +30,8 @@
 }
 
 .App-link {
-  color: #61dafb;
+    //color: #61dafb;
+    color: rgb(255,255,255) !important;
 }
 
 @keyframes App-logo-spin {

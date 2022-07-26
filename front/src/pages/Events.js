@@ -1,32 +1,111 @@
-import '../styles/cards.css';
-import {Link} from 'react-router-dom';
-const Events = () => {
-    const posts = [
-        {id: 1, title:'Card1', text:'This is first post. This is first post. This is first post. This is first post.'},
-        {id: 2, title:'Card2', text:'This is second post. This is second post. This is second post.'},
-        {id: 3, title:'Card3', text:'This is third post. This is third post. This is third post. This is third post.'},
-        {id: 4, title:'Card4', text:'This is forth post. This is forth post. This is forth post. This is forth post.'}
-    ];
-    const res = posts.map(function(item) {
-		return <>
-            <div class="card card-1">
-                <div class="card__icon"><i class="fas fa-bolt"></i></div>
-                <p class="card__exit"><i class="fas fa-times"></i></p>
-                <h2 class="card__title">{item.text}</h2>
-                <p class="card__apply">
-                <p class="card__link"><Link to={"event/" + item.id} replace="true">{item.title}</Link></p>
-                </p>
-            </div>
-            
-            </>
-	});
-    return (
-        <div class="main-container">
-            <div class="cards">
-                {res}
-            </div>
-        </div>
-    )
-}
+import React, { Component } from 'react';
+import { Container, Card } from 'react-bootstrap';
+import img1 from '../components/data/k1.jpg';
+import img2 from '../components/data/k4.jpg';
+import img3 from '../components/data/k2.jpg';
+export default class Events extends Component {
+    render() {
+        return (
+            <>
+                
+                <div className="row mt-5 mx-5" id="body_events">
+                    <div className="col-2" style={{ textAlign: 'start',padding: '0px',paddingLeft: '0.74em' }}>
+                        <h4 class="mb-3">Выберите аудиторию:</h4>
+                        <button class="btn btn-primary mt-1">
+                            110а</button>
+                        <button class="btn btn-primary mt-1">
+                            104</button>
+                        <button class="btn btn-primary mt-1">
+                            108</button>
+                        <h4 id="themes">Темы:</h4>
+                        <button type="button" className="btn btn-primary mt-2">Поступающим</button>
+                        <button type="button" className="btn btn-secondary mt-2">Образование</button>
+                        <button type="button" className="btn btn-success mt-2">Наука</button>
+                        <button type="button" className="btn btn-warning mt-2" id="B">Университетская жизнь</button>
+                        <button type="button" className="btn btn-danger mt-2">Общество</button>
+                        <button type="button" className="btn btn-dark mt-2">Мероприятия</button>
+                        <button type="button" className="btn btn-light mt-2" style={{ background: '#c5c8ca' }}>Олимпиады</button>
+                        <button type="button" className="btn btn-info mt-2">Спорт</button>
+                        <h4 class="my-3">Создать мероприятие:</h4>
+                        <div class="d-flex justify-content-center">
+                            <button id="btn_create" class="btn-success btn event-btn" data-bs-toggle="modal" data-bs-target="#writeEvent">
+                                Создать</button>
+                        </div>
 
-export default Events
+                    </div>
+
+                    <Container className="col-10 " id="row-cont2">
+                        <Container className="row cards-cont1">
+                            <Card className="col-4 card2">
+                                <Card.Img variant="top"
+                                    src={img1} />
+                                <Card.Body>
+                                    <Card.Title>Совместный кампус РГГМУ и Политеха начнет обучение студентов осенью 2022 года</Card.Title>
+                                    <Card.Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque hic necessitatibus similique ex adipisci inventore ullam laudantium, error dignissimos at minus et aspernatur impedit. Repudiandae dolore vero tenetur soluta excepturi ea pariatur neque, dolorem accusantium dolorum, ab ducimus dolores voluptatem cum ex cumque laboriosam odio explicabo! Repellat vitae quos in.</Card.Text>
+                                    <button type="button" class="btn btn-primary mt-2">110a</button>
+                                    <button type="button" class="btn btn-warning mt-2" id="B">Университетская жизнь</button>
+                                    <button type="button" class="btn btn-secondary mt-2">Образование</button>
+                                    <button type="button" class="btn btn-info mt-2">Спорт</button>
+                                    <p class="data_time">20:00 <br/> 10.05.2022</p>
+                                    
+                                </Card.Body>
+                                <div class="card-footer d-grid gap-2 d-flex justify-content-center">
+                                    <button class="calendar__button calendar__button--primary event-btn">
+                                        Записаться</button>
+                                </div>
+                            </Card>
+                            <Card className="col-4 card2">
+                                <Card.Img variant="top"
+                                    src={img2} />
+                                <Card.Body>
+                                    <Card.Title>Совместный кампус РГГМУ и Политеха начнет обучение
+                студентов осенью 2022 года</Card.Title>
+                                    <Card.Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Neque hic necessitatibus similique ex adipisci inventore ullam laudantium, error
+                                    dignissimos at minus et aspernatur impedit. Repudiandae dolore vero tenetur soluta
+                                    excepturi ea pariatur neque, dolorem accusantium dolorum, ab ducimus dolores voluptatem
+                cum ex cumque laboriosam odio explicabo! Repellat vitae quos in.</Card.Text>
+                                    <button type="button" class="btn btn-primary mt-2">110a</button>
+                                    <button type="button" class="btn btn-success mt-2">Наука</button>
+                                    <button type="button" class="btn btn-warning mt-2" id="B">Университетская жизнь</button>
+                                    <button type="button" class="btn btn-danger mt-2">Общество</button>
+                                    <p class="data_time">20:00 <br /> 10.05.2022</p>
+                                </Card.Body>
+                                    <div class="card-footer d-grid gap-2 d-flex justify-content-center">
+                                        <button class="calendar__button calendar__button--primary event-btn">
+                                        Записаться</button>
+                                    </div>
+                            </Card>
+                            <Card className="col-4 card2">
+                                <Card.Img variant="top"
+                                    src={img3} />
+                                <Card.Body>
+                                    <Card.Title>Совместный кампус РГГМУ и Политеха начнет обучение
+                студентов осенью 2022 года</Card.Title>
+                                    <Card.Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi sit nam
+                                    molestias harum unde magnam praesentium itaque non sequi dignissimos ipsum quo similique, nisi sint ipsa
+                                    laboriosam distinctio porro beatae, veritatis quam. Architecto quo recusandae consequatur. Harum
+                                    mollitia saepe quia facilis sunt inventore aut accusantium sequi, excepturi sapiente nemo laudantium
+                                    quae vitae et impedit alias dolore quod omnis, nisi odit rem ea doloribus. Id quo suscipit molestias
+                                    odit eum. Numquam vel, non architecto nisi placeat doloremque, dignissimos officia tempore natus tempora
+                                    molestiae cum rerum quidem expedita nemo tenetur ipsa ratione quaerat! Dolor, id magnam eligendi
+                molestiae harum illo ea?</Card.Text>
+                                    <button type="button" class="btn btn-primary mt-2">110a</button>
+                                    <button type="button" class="btn btn-dark mt-2">Мероприятия</button>
+                                    <button type="button" class="btn btn-light mt-2" style={{ background: '#c5c8ca'}}>Олимпиады</button>
+                                    <button type="button" class="btn btn-info mt-2">Спорт</button>
+                                    <p class="data_time">20:00 <br/> 10.05.2022</p>
+                                </Card.Body>
+                                <div class="card-footer d-grid gap-2 d-flex justify-content-center">
+                                    <button class="calendar__button calendar__button--primary event-btn">
+                                        Записаться</button>
+                                </div>
+                            </Card>
+                        </Container>
+                    </Container>
+                </div>
+
+            </>
+        )
+    }
+}
