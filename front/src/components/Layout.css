@@ -1,6 +1,5 @@
 .sticky-top {
-    position: -webkit-sticky;
-    position: sticky;
+    position: sticky!important;
     top: 0;
     z-index: 1020;
 }
@@ -542,6 +541,7 @@ button {
 .btn {
     border-radius: 0.25rem;
 }
+
 @media (max-width: 768px) {
 
     #body_events {
@@ -550,39 +550,72 @@ button {
         flex-direction: column;
         align-content: flex-start;
     }
+
     .ms-5 {
-        margin-left: 0px!important;
+        margin-left: 0px !important;
     }
+
     #row-cont1 {
         width: 100%;
     }
+
     .cards-cont1 {
         display: flex;
         flex-direction: column;
+        flex-basis: 100%;
     }
+
     #row-cont2 {
         width: 100%;
     }
-        .card2 {
+
+    .card2 {
         width: 100%;
     }
+
     .col-2 {
         width: 100%;
-        padding: 0px 0px 10px 0px!important;
+        padding: 0px 0px 10px 0px !important;
     }
+
     .justify-content-center {
         margin: 0px 0px 10px 10px;
-        display: flex!important;
-        justify-content: flex-start!important;
+        display: flex !important;
+        justify-content: flex-start !important;
     }
-        #btn_create {
+
+    #btn_create {
         margin: 0px 0px 10px 0px;
     }
 
     div.row .card1 {
         width: 100%;
     }
+
+    .logo_for_media_pr {
+        padding: 1rem !important;
+        margin-bottom: 0 !important;
+        flex: 0 0 auto;
+        width: 41.66666667%;
+        display: block;
     }
+
+    #text_pr_inf {
+        padding: 20px 10px 20px 0px !important;
+    }
+
+    #body_for_pr_inf {
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        flex-direction: column;
+    }
+    .width_for_pr_inf {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
 @media (min-width: 769px) and (max-width: 1280px) {
     div.row .card1 {
         width: 40% !important;
@@ -593,4 +626,61 @@ button {
     .card2 {
         width: 48%;
     }
+    #body_for_pr_inf {
+        margin-right: 0px !important;
+        justify-content: center !important;
+        margin-left: 0px !important;
+    }
+    .width_for_pr_inf {
+        margin: 0px 0px 0px 0px!important;
+    }
+    }
+.card3 {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    margin:30px 0px;
+    background-color: rgb(248, 249, 250);
+    border-color: rgb(248, 249, 250);
+    border-block-color: silver;
+    border-radius: 0;
+}
+.text-post1 {
+    padding-left: 1px;
+    text-align: justify;
+    margin: 0px;
+}
+.dir {
+    padding-top: 0px !important;
+    padding-left: 3% !important;
+}
+.card-body p{
+    margin:0px;
+}
+.admin{
+    display:contents;
+}
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.feat {
+    border-left: 3px solid #1752ff;
+}
+
+.card-header {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.list:hover {
+    background-color: #ededed;
+}
+.card-height {
+    min-height: max-content;
+    height: auto !important;
+    margin-bottom: 2em!important;
+    margin-top: 2em!important;
+    text-align:center;
 }

@@ -25,7 +25,7 @@ export default class Header extends Component {
         const menuClass4 = `dropdown-menu${this.state.isOpen4 ? " show" : ""}`;
         return (
             <>
-                <Navbar className="sticky-top navbar navbar-expand-lg navbar-dark bg-dark" id="Navbar" fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Navbar className=" navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="Navbar" fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Container id="menu">
                             <Navbar.Brand href="https://www.rshu.ru/" target="_blank" className="navbar-brand">
                                 <img
@@ -62,15 +62,15 @@ export default class Header extends Component {
                                         >
                                             Дирекция</a>
                                         <div className={menuClass1} id="id1" /*aria-labelledby="dropdownMenuButton"*/ onClick={this.toggleOpen1} >
-                                            <a className="dropdown-item" href="#nogo">
+                                            <a className="dropdown-item" href="/dir#director">
                                                 Директор</a>
-                                            <a className="dropdown-item" href="#nogo">
+                                            <a className="dropdown-item" href="/dir#zav_inst">
                                                 Заместитель директора</a>
-                                            <a className="dropdown-item" href="#nogo">
+                                            <a className="dropdown-item" href="/dir#umr">
                                                 Учебно-методические работники</a>
-                                            <a className="dropdown-item" href="#nogo">
+                                            <a className="dropdown-item" href="/dir#pro_inst">
                                                 Чем занимается институт</a>
-                                            <a className="dropdown-item" href="#nogo">
+                                            <a className="dropdown-item" href="/dir#napr">
                                                 Все направления подготовки</a>
                                         </div>
                                     </div> 
@@ -122,7 +122,7 @@ export default class Header extends Component {
                                                 Информационных технологий и систем безопасности</a>
                                             <a className="dropdown-item" href="#nogo">
                                                 Морских информационных систем</a>
-                                            <a className="dropdown-item" href="#nogo">
+                                            <a className="dropdown-item" href="/prik_inf">
                                                 Прикладной информатики</a>
                                             <a className="dropdown-item" href="#nogo">
                                                 Физики</a>

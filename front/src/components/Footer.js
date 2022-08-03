@@ -10,7 +10,7 @@ export default class Footer extends Component {
             <>
                 <Container fluid style={{
                     backgroundColor: '#212529', position: 'relative',
-                    bottom: '0', color: '#fff', marginTop: '3rem!important', paddingLeft: '0px'}}>
+                    bottom: '0', color: '#fff', paddingLeft: '0px'  }}>
                     <Container id='cont1' style={{
                         display: 'flex',
                         justifyContent: 'center',
